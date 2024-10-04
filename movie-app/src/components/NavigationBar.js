@@ -1,8 +1,9 @@
+// Importing Bootsrap components
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
-
+// building a navigation Bar Via Bootstrap
 const NavigationBar = () => {
   return (
         <Navbar bg="primary" data-bs-theme="dark">
@@ -18,4 +19,5 @@ const NavigationBar = () => {
   );
 };
 
+// exporting module to be used in app.js
 export default NavigationBar;

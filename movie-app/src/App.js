@@ -6,18 +6,23 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Content from './components/Content';
 
-// Added Navbar which uses Reacts ROUTER LINK to navigate to different
-// pages which we have set as components and js xml tags
+// Added Navbar which uses Reacts ROUTER LINK to navigate to different "Components" using client side routing
+// Client side routing is the clients ability to change the URL without making another request to the server allowing
+// you to instantly update your Apps UI aswell as make data requests with the command fetch to update the page with new information.
 function App() {
   return (
     <Router>
+      {/* External NavigationBar componenet*/}
       <NavigationBar />
+      {/* External header componenet*/}
       <Header />
       <Routes>
+        {/* Routes set to components which contain the JS XML content*/}
         <Route path="/home" element={<Content />} />
-        <Route path="/read" element={<h1>Read Component</h1>} />
-        <Route path="/create" element={<h1>Create Component</h1>} />
+        <Route path="/read" element={<Header></Header>} />
+        <Route path="/create" element={<Footer></Footer>} />
       </Routes>
+      {/* External Footer componenet*/}
       <Footer />
     </Router>
   );
